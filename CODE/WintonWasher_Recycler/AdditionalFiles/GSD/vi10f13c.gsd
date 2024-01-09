@@ -1,0 +1,124 @@
+;*****************************************************************************;
+; Geraetestammdatei (D) fuer Feldbusconverter cp_fb13_e / PROFIBUS DP         ;
+; Hersteller: Fa. FESTO AG&Co., Ruiterstrasse 82, 73734 Esslingen             ;
+; ----------------------------------------------------------------------------;
+; ƒnderungen:                                                                 ;
+; 03.09.99 / gff: GSD_Version als Parameter entfernt                          ;
+; 03.09.99 / gff: Bitmap_Diag aktiviert                                       ;
+; 03.09.99 / gff: Parameter Min_Slave_Intervall, Max_Module,Max_Input_Len,    ;
+;                 Max_Output_Len, Max_Diag_Data_Len  von DEC->HEX             ;
+; 03.09.99 / gff: Unit_Diag_Bit - Texte erg‰nzt f¸r Klartext-Diagnose         ;
+; ----------------------------------------------------------------------------;
+; FESTO Hotline-Tel.: 0711/3463-222                                           ;
+;*****************************************************************************;
+#Profibus_DP
+GSD_Revision        = 1
+Vendor_Name         = "FESTO AG&CO."          ; Herstellername
+Model_Name          = "FESTO CP FB13"         ; Herstellerbezeichnung
+Revision            = "> 10.02.97"            ; Ausgabestand des Geraets
+Ident_Number        = 0xF13C                  ; Ident-Nummer
+Protocol_Ident      = 0                       ; PROFIBUS_DP Protokoll
+Station_Type        = 0                       ; Slave-Station
+Hardware_Release    = "> 11.96"               ; Hardware-Stand
+Software_Release    = "> V1.1"                ; Software-Stand
+;
+9.6_supp            = 1                       ; Baudrate 9.6kB unterstuetzt
+19.2_supp           = 1                       ; Baudrate 19.2kB unterstuetzt
+93.75_supp          = 1                       ; Baudrate 93.75kB unterstuetzt
+187.5_supp          = 1                       ; Baudrate 187.5kB unterstuetzt
+500_supp            = 1                       ; Baudrate 500kB unterstuetzt
+1.5M_supp           = 1                       ; Baudrate 1.5MB unterstuetzt
+3M_supp             = 1                       ; Baudrate 3MB unterstuetzt
+6M_supp             = 1                       ; Baudrate 6MB unterstuetzt
+12M_supp            = 1                       ; Baudrate 12MB unterstuetzt
+;
+MaxTsdr_9.6   = 60
+MaxTsdr_19.2  = 60
+MaxTsdr_93.75 = 60
+MaxTsdr_187.5 = 60
+MaxTsdr_500   = 100
+MaxTsdr_1.5M  = 150
+MaxTsdr_3M    = 250
+MaxTsdr_6M    = 400
+MaxTsdr_12M   = 800
+;
+Redundancy          = 0
+Repeater_Ctrl_Sig   = 2
+24V_Pins            = 0
+;
+;Implementation_Type = "implementation type"
+Bitmap_Device       = "pbfb13cn"
+Bitmap_Diag         = "pbfb13cd"
+;Bitmap_SF           = "pbfb13cs"
+;
+Freeze_Mode_supp    = 1                       ; Freeze Mode
+Sync_Mode_supp      = 1                       ; Sync Mode
+Auto_Baud_supp      = 1                       ; automatische Baudratenerk.
+Set_Slave_Add_supp  = 0                       ; keine Adressvergabe ueber BUS
+Min_Slave_Intervall = 0x000C                  ; min. Slave-Aufrufzeit
+;
+Modular_Station     = 1                       ; modulares Konzept
+Max_Module          = 0x04                    ; max. Anzahl Module (ID an Slave)
+Max_Input_Len       = 0x08                    ; max. Anzahl Eingangsbytes
+Max_Output_Len      = 0x08                    ; max. Anzahl Ausgangsbytes
+Max_Data_Len        = 0x0010                  ; max. Anzahl E+A-Bytes = 16
+Modul_Offset        = 0
+;
+Fail_Safe           = 0
+Slave_Family        = 4
+Max_Diag_Data_Len   = 0x000C
+;
+Unit_Diag_Bit(0)    = "+ Ventilinsel-Fehler"
+Unit_Diag_Bit(1)    = "+ Ventilinsel-Busy"
+Unit_Diag_Bit(4)    = "+ Fehler CP Strang 0 (C0)"
+Unit_Diag_Bit(5)    = "+ Fehler CP Strang 1 (C1)"
+Unit_Diag_Bit(6)    = "+ Fehler CP Strang 2 (C2)"
+Unit_Diag_Bit(7)    = "+ Fehler CP Strang 3 (C3)"
+Unit_Diag_Bit(8)    = "..(C0)CP-Anschluﬂ zu A-Modul"
+Unit_Diag_Bit(9)    = "..(C0)CP-Anschluﬂ zu E-Modul"
+Unit_Diag_Bit(10)    = "..(C0)Kurzschluﬂ/Last A-Modul"
+Unit_Diag_Bit(11)    = "..(C0)Lastspannung A-Modul"
+Unit_Diag_Bit(12)    = "..(C0)Sensorversorgung < 10V"
+Unit_Diag_Bit(13)    = "..(C0)Spannung Ventile < 20.4V"
+Unit_Diag_Bit(14)    = "..(C0)Spannung Ventile < 10V"
+Unit_Diag_Bit(15)    = "---"
+Unit_Diag_Bit(16)    = "..(C1)CP-Anschluﬂ zu A-Modul"
+Unit_Diag_Bit(17)    = "..(C1)CP-Anschluﬂ zu E-Modul"
+Unit_Diag_Bit(18)    = "..(C1)Kurzschluﬂ/Last A-Modul"
+Unit_Diag_Bit(19)    = "..(C1)Lastspannung A-Modul"
+Unit_Diag_Bit(20)    = "..(C1)Sensorversorgung < 10V"
+Unit_Diag_Bit(21)    = "..(C1)Spannung Ventile < 20.4V"
+Unit_Diag_Bit(22)    = "..(C1)Spannung Ventile < 10V"
+Unit_Diag_Bit(23)    = "---"
+Unit_Diag_Bit(24)    = "..(C2)CP-Anschluﬂ zu A-Modul"
+Unit_Diag_Bit(25)    = "..(C2)CP-Anschluﬂ zu E-Modul"
+Unit_Diag_Bit(26)    = "..(C2)Kurzschluﬂ/Last A-Modul"
+Unit_Diag_Bit(27)    = "..(C2)Lastspannung A-Modul"
+Unit_Diag_Bit(28)    = "..(C2)Sensorversorgung < 10V"
+Unit_Diag_Bit(29)    = "..(C2)Spannung Ventile < 20.4V"
+Unit_Diag_Bit(30)    = "..(C2)Spannung Ventile < 10V"
+Unit_Diag_Bit(31)    = "---"
+Unit_Diag_Bit(32)    = "..(C3)CP-Anschluﬂ zu A-Modul"
+Unit_Diag_Bit(33)    = "..(C3)CP-Anschluﬂ zu E-Modul"
+Unit_Diag_Bit(34)    = "..(C3)Kurzschluﬂ/Last A-Modul"
+Unit_Diag_Bit(35)    = "..(C3)Lastspannung A-Modul"
+Unit_Diag_Bit(36)    = "..(C3)Sensorversorgung < 10V"
+Unit_Diag_Bit(37)    = "..(C3)Spannung Ventile < 20.4V"
+Unit_Diag_Bit(38)    = "..(C3)Spannung Ventile < 10V"
+Unit_Diag_Bit(39)    = "---"
+;
+; Kennungen fuer CP-Strangbelegung
+;
+; Ventilinsel mit einem Strang
+Module= "Strang 0 - 2 Byte EA" 0x31
+EndModule
+; Ventilinsel mit 2 Straengen
+Module= "Strang 1 - 4 Byte EA" 0x31,0x31
+EndModule
+; Ventilinsel mit 3 Straengen
+Module= "Strang 2 - 6 Byte EA" 0x31,0x31,0x31
+EndModule
+; Ventilinsel mit 4 Straengen
+Module= "Strang 3 - 8 Byte EA" 0x31,0x31,0x31,0x31
+EndModule
+;

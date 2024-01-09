@@ -1,0 +1,14 @@
+þÿÿÿ ###id###VisulizationRootBrowsableId###TargetIdAcknowledgementGroupText-###SearchableNonTechnicalFieldNamesOfDocument###ParentIds###ImmediateParentId###ReferenceFieldIdsInvalidAttempts	ValidDaysWarningDaysGenerationsMinNumPsswd
+ServerName
+PortNumberWindowsDomainNameStationNamePartnerNameNodeNameDisplayNameAcknowledgementModelIdEmailAddressAcknowledgedText
+ComingText	GoingTextCommonAlarmClassAcknowledgementBitAddress
+AlarmClass	AlarmTextPlcAcknowledgementBitAddressTriggerBitAddress###SearchFilterIds	CycleUnit	CycleTimeTextCommentNumber	ShortName
+LogoutTimeTitleLanguageVersion###UpdatableParentIdInterfaceMember_NameInterfaceMember_DatatypeInterfaceMember_ValueInterfaceMember_CommentNetwork titleSTL CodeNetwork commentLADFBD CodeInstance DBDatatypeAddress	BackColor	GridColorBackFillStyleBorderBackColorBorderColor	EdgeStyleFirstGradientColorFlashing
+FocusColorFont	ForeColorHorizontalAlignmentHorizontalPictureAlignmentMiddleGradientColorModePictureAutoSizingSecondGradientColorTextOffTextOnTextOrientationVerticalAlignmentVerticalPictureAlignment	FunctionsAlarmSourceButtonBackColorButtonBackFillStyleButtonBarStyleButtonBorderBackColorButtonBorderColorButtonEdgeStyleButtonFirstGradientColorButtonMiddleGradientColorButtonSecondGradientColorColumnTextAckGroupColumnTextAlarmStateColumnTextAlarmTextColumnTextClassNameColumnTextDateColumnTextDeviceColumnTextDiagnosableColumnTextNumberColumnTextTime
+FilterTextGridlineColorLayerSelectionBackColorSelectionForeColorSortByTimeDirectionTableBackColorTableEvenRowBackColor	TableFontTableForeColorTableHeaderBackColorTableHeaderBackFillStyleTableHeaderBorderBackColorTableHeaderBorderColorTableHeaderEdgeStyleTableHeaderFirstGradientColorTableHeaderFontTableHeaderForeColorTableHeaderMiddleGradientColorTableHeaderSecondGradientColorViewTypeUITypeEditorBitPositionUITypeEditorTagExpressionRangeFromToTemplateAboveUpperLimitColorBelowLowerLimitColor
+DataFormatFormatPatternUnitCaptionDataTypeTagAddressPanelInfoAddressAccessModeAcquisitionTriggerModeAcquisitionCycleConfirmationTypeCoding
+ConnectionPlcNameControllerTagLimitHighConstantLimitHighLowConstantLimitLowHighConstantLimitLowConstant	JobNumber
+StartValue	PictureOn
+LineColor1
+LineColor2OperatableAreaColor
+VisibilityAuthorFamilyUser-defined ID###ReconstitutionDataIDAssociatedCultureFieldIdAssociatedProjectVersion!AssociatedIndexDataVersionFieldId,AssociatedTechnicalFieldNamesHashCodeFieldId-AssociatedTechnicalFieldContentVersionFieldIdIndexAtomStore

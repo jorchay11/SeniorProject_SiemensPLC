@@ -1,0 +1,88 @@
+;*****************************************************************************;
+; Geraetestammdatei fuer Feldbusconverter cp_fb13_e / PROFIBUS DP             ;
+; Hersteller: FESTO AG & Co., Ruiterstrasse 82, 73734 Esslingen               ;
+; FESTO Hotline-Tel.: 0711/3463-222                                           ;
+;*****************************************************************************;
+#Profibus_DP
+GSD_Revision        = 1
+;
+Vendor_Name         = "FESTO AG&CO."          ; Herstellername
+Model_Name          = "FESTO CP FB13"         ; Herstellerbezeichnung
+Revision            = "> 10.02.97"            ; Ausgabestand des Geraets
+Ident_Number        = 0xF13C                  ; Ident-Nummer
+Protocol_Ident      = 0                       ; PROFIBUS_DP Protokoll
+Station_Type        = 0                       ; Slave-Station
+Hardware_Release    = "> 11.96"               ; Hardware-Stand
+Software_Release    = "> V1.1"                ; Software-Stand
+;
+9.6_supp            = 1                       ; Baudrate 9.6kB unterstuetzt
+19.2_supp           = 1                       ; Baudrate 19.2kB unterstuetzt
+93.75_supp          = 1                       ; Baudrate 93.75kB unterstuetzt
+187.5_supp          = 1                       ; Baudrate 187.5kB unterstuetzt
+500_supp            = 1                       ; Baudrate 500kB unterstuetzt
+1.5M_supp           = 1                       ; Baudrate 1.5MB unterstuetzt
+3M_supp             = 1                       ; Baudrate 3MB unterstuetzt
+6M_supp             = 1                       ; Baudrate 6MB unterstuetzt
+12M_supp            = 1                       ; Baudrate 12MB unterstuetzt
+;
+MaxTsdr_9.6   = 60
+MaxTsdr_19.2  = 60
+MaxTsdr_93.75 = 60
+MaxTsdr_187.5 = 60
+MaxTsdr_500   = 100
+MaxTsdr_1.5M  = 150
+MaxTsdr_3M    = 250
+MaxTsdr_6M    = 400
+MaxTsdr_12M   = 800
+;
+Redundancy          = 0
+Repeater_Ctrl_Sig   = 2
+24V_Pins            = 0
+;
+;Implementation_Type = "implementation type"
+Bitmap_Device       = "pbfb13cn"
+;Bitmap_Diag         = "pbfb13cd"
+;Bitmap_SF           = "pbfb13cs"
+;
+Freeze_Mode_supp    = 1                       ; Freeze Mode
+Sync_Mode_supp      = 1                       ; Sync Mode
+Auto_Baud_supp      = 1                       ; automatische Baudratenerk.
+Set_Slave_Add_supp  = 0                       ; keine Adressvergabe ueber BUS
+Min_Slave_Intervall = 12                      ; min. Slave-Aufrufzeit
+;
+Modular_Station     = 1                       ; modulares Konzept
+Max_Module          = 4                       ; max. Anzahl Module
+;max. Anzahl der Module welche als Konfiguration an den Slave gesendet werden
+Max_Input_Len       = 08                      ; max. Anzahl Eingangsbytes
+Max_Output_Len      = 08                      ; max. Anzahl Ausgangsbytes
+Max_Data_Len        = 16                      ; max. Anzahl E+A-Bytes
+Modul_Offset        = 0
+;
+Fail_Safe           = 0
+Slave_Family        = 4
+Max_Diag_Data_Len   = 12
+;
+Unit_Diag_Bit(0)    = "Valve terminal error"
+Unit_Diag_Bit(1)    = "Valve terminal busy"
+Unit_Diag_Bit(2)    = "Unused"
+Unit_Diag_Bit(3)    = "Unused"
+Unit_Diag_Bit(4)    = "Error line 0"
+Unit_Diag_Bit(5)    = "Error line 1"
+Unit_Diag_Bit(6)    = "Error line 2"
+Unit_Diag_Bit(7)    = "Error line 3"
+;
+; Kennungen fuer CP-Strangbelegung
+;
+; Ventilinsel mit einem Strang
+Module= "Line 0 - 2 Byte IO" 0x31
+EndModule
+; Ventilinsel mit 2 Straengen
+Module= "Line 1 - 4 Byte IO" 0x31,0x31
+EndModule
+; Ventilinsel mit 3 Straengen
+Module= "Line 2 - 6 Byte IO" 0x31,0x31,0x31
+EndModule
+; Ventilinsel mit 4 Straengen
+Module= "Line 3 - 8 Byte IO" 0x31,0x31,0x31,0x31
+EndModule
+;
